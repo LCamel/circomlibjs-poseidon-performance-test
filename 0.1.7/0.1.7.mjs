@@ -3,6 +3,7 @@ import { performance } from 'node:perf_hooks';
 
 const poseidon = await buildPoseidon();
 
+console.log(poseidon([1, 2]));
 
 const t0 = performance.now();
 for (let i = 0; i < 10000; i++) {
@@ -10,13 +11,12 @@ for (let i = 0; i < 10000; i++) {
 }
 const t1 = performance.now();
 
-console.log(t1 - t0);
+console.log("t1 - t0: ", t1 - t0);
 
 
 
 
 
-//console.log(poseidon([1, 2]));
 /*
 const F = poseidon.F;
 const a = poseidon([1, 2]);
